@@ -1,0 +1,59 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import 'cabin-font';
+
+$colour-aqua: #20AB94;
+$colour-green: #17CA11;
+$colour-blue: #1C8BF4;
+$colour-purple: #202C88;
+$colour-red: #EA1535;
+$colour-yellow: #FFC238;
+
+body {
+  animation: colorchange 50s infinite;
+  animation-direction: alternate;
+  -webkit-animation: colorchange 50s infinite;
+  -webkit-animation-direction: alternate;
+}
+
+@keyframes colorchange
+{
+  0%   {background: $colour-aqua;}
+  20%  {background: $colour-green;}
+  40%  {background: $colour-blue;}
+  60%  {background: $colour-purple;}
+  80%  {background: $colour-red;}
+  100% {background: $colour-yellow;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: $colour-aqua;}
+  20%  {background: $colour-green;}
+  40%  {background: $colour-blue;}
+  60%  {background: $colour-purple;}
+  80%  {background: $colour-red;}
+  100% {background: $colour-yellow;}
+}
+
+h1 {
+  color: white;
+  font-family: 'Cabin';
+  font-size: 14em;
+  text-transform: uppercase;
+  line-height: 0.8em;
+  letter-spacing: -0.08em;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Cabin';
+  color: white;
+  font-weight: 300;
+  margin-left: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
