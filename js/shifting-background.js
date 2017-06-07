@@ -1,9 +1,7 @@
-var colours = ['#20AB94','#17CA11','#1C8BF4', '#202C88'];
-
 var createTextElement = function(text, times, size, spacing) {
   var span = document.createElement('span')
   var output = '';
-  var colour = colours[Math.floor(Math.random() * colours.length)];
+  var seed = Math.floor(Math.random() * 50) + 1
 
   for(var i=0; i<times; i++)
   {
@@ -12,8 +10,9 @@ var createTextElement = function(text, times, size, spacing) {
 
   span.innerHTML = output;
   span.setAttribute("style", "font-size: " + size + ";" +
-                    "color: " + colour + ";" +
-                    "letter-spacing: " + spacing + ";");
+                    "letter-spacing: " + spacing + ";" +
+                    "-webkit-animation-delay: " + -seed + "s;" +
+                    "animation-delay: " + -seed + "s;");
 
   return span;
 }

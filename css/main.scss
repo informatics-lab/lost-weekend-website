@@ -12,6 +12,12 @@ $colour-purple: #202C88;
 $colour-red: #EA1535;
 $colour-yellow: #FFC238;
 
+$viridis-1: #48085F;
+$viridis-2: #345E8E;
+$viridis-3: #228E8E;
+$viridis-4: #53C669;
+$viridis-5: #F5EC4D;
+
 body {
   animation: colorchange 50s infinite;
   animation-direction: alternate;
@@ -20,21 +26,35 @@ body {
 }
 
 @keyframes colorchange {
-  0%   {background: $colour-aqua;}
-  20%  {background: $colour-green;}
-  40%  {background: $colour-blue;}
-  60%  {background: $colour-purple;}
-  80%  {background: $colour-red;}
-  100% {background: $colour-yellow;}
+  0%    {background: $viridis-1;}
+  25%   {background: $viridis-2;}
+  50%   {background: $viridis-3;}
+  75%   {background: $viridis-4;}
+  100%  {background: $viridis-5;}
 }
 
 @-webkit-keyframes colorchange {
-  0%   {background: $colour-aqua;}
-  20%  {background: $colour-green;}
-  40%  {background: $colour-blue;}
-  60%  {background: $colour-purple;}
-  80%  {background: $colour-red;}
-  100% {background: $colour-yellow;}
+  0%    {background: $viridis-1;}
+  25%   {background: $viridis-2;}
+  50%   {background: $viridis-3;}
+  75%   {background: $viridis-4;}
+  100%  {background: $viridis-5;}
+}
+
+@keyframes textcolorchange {
+  0%    {color: $viridis-1;}
+  25%   {color: $viridis-2;}
+  50%   {color: $viridis-3;}
+  75%   {color: $viridis-4;}
+  100%  {color: $viridis-5;}
+}
+
+@-webkit-keyframes textcolorchange {
+  0%    {color: $viridis-1;}
+  25%   {color: $viridis-2;}
+  50%   {color: $viridis-3;}
+  75%   {color: $viridis-4;}
+  100%  {color: $viridis-5;}
 }
 
 h1 {
@@ -69,6 +89,10 @@ h2 {
   right: -50px;
 
   span {
+    animation: textcolorchange 50s infinite;
+    animation-direction: alternate;
+    -webkit-animation: textcolorchange 50s infinite;
+    -webkit-animation-direction: alternate;
     position: fixed;
     width: 110%;
     height: 110%;
