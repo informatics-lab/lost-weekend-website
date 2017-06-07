@@ -19,8 +19,7 @@ body {
   -webkit-animation-direction: alternate;
 }
 
-@keyframes colorchange
-{
+@keyframes colorchange {
   0%   {background: $colour-aqua;}
   20%  {background: $colour-green;}
   40%  {background: $colour-blue;}
@@ -29,8 +28,7 @@ body {
   100% {background: $colour-yellow;}
 }
 
-@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
-{
+@-webkit-keyframes colorchange {
   0%   {background: $colour-aqua;}
   20%  {background: $colour-green;}
   40%  {background: $colour-blue;}
@@ -51,9 +49,29 @@ h1 {
 
 h2 {
   font-family: 'Cabin';
+  font-size: 3em;
   color: white;
   font-weight: 300;
   margin-left: 2em;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+#shifting-background {
+  word-wrap: break-word;
+  overflow: hidden;
+  font-family: 'Cabin';
+  z-index: -1;
+  position: fixed;
+  top: -50px;
+  bottom: -50px;
+  left: -50px;
+  right: -50px;
+
+  span {
+    position: fixed;
+    width: 110%;
+    height: 110%;
+    line-height: 0.6em;
+  }
 }
